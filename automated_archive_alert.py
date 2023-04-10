@@ -62,6 +62,8 @@ def archive_alert(aoi_file_name: str, cloud_cover: int, collection: list[str]):
     f.write(f"{search_start_date},{aoi_name_stem},{gmtime},{scene_count}\n")
     f.close()
 
+    fm.check_for_aoi_in_scene_count_file(aoi_file_name)
+
     previous_count = fm.retrieve_previous_count(aoi_file_name)
     print(f'{previous_count} was the previous count')
 

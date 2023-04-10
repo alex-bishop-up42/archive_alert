@@ -130,6 +130,25 @@ def set_count_to_0(aoi_file_name):
     cjf.close()
 
 
+def check_for_aoi_in_scene_count_file(aoi_file_name):
+    count_json_file = './output/previous_scene_count.json'
+    cjf = open(count_json_file)
+    cjf_data = json.load(cjf)
+
+    # Check if aoi is in scene count json
+    if aoi_file_name in cjf_data.keys():
+        print('AOI already in previous_scene_count.json file')
+    else:
+        print('AOI not in previous_scene_count.json file')
+        cjf_data[aoi_file_name] = 0
+        print('Has now been added')
+
+    with open(count_json_file, 'w') as kl:
+        kl.write(json.dumps(cjf_data))
+
+    cjf.close()
+
+
 def send_email(scene_count: int, aoi_name_stem: str, time: str):
 
     """
