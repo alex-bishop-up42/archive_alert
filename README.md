@@ -27,7 +27,7 @@ collection = ['pneo', 'spot', 'phr']<br>
 >cloud_cover = 10<br>
 
 Available collections can be discovered using the following code. It will print out all the currently available datasets 
-that can be queried via code. For now, you can search for collections within a host. You can not for instance search 
+that can be queried via the API. For now, you can search for collections within a host. You can not for instance search 
 for Hexagon and OneAtlas collections at the same time as these are different host endpoints.<br> 
 >all_collection_list = catalog.get_collections() <br>
 for x in all_collection_list: <br>
