@@ -33,6 +33,10 @@ for Hexagon and OneAtlas collections at the same time as these are different hos
 for x in all_collection_list: <br>
 >print(f"{x['host']['name']} -> {x['name']}")
 
+Automation and scheduling:<br>
+In its current state, this code will run every 60 minutes. You can modify this as needed in the main.py file. Some example
+are commented in that file.
+
 Notification:<br>
 In this current version I send an email notification using my Google email account. In order to send emails via python 
 you must first create a dedicated app password. See this documentation on how to do so:<br>
@@ -49,3 +53,4 @@ The program uses the following Libraries:<br>
 + json
 + schedule
 
+Happy archive searching !!
