@@ -41,6 +41,7 @@ Notification:<br>
 In this current version I send an email notification using my Google email account. In order to send emails via python 
 you must first create a dedicated app password. See this documentation on how to do so:<br>
 https://support.google.com/accounts/answer/185833?hl=en <br>
+Once you have the password you can paste it into ./credentials/email_password.json 
 
 The program uses the following Libraries:<br>
 + up42
